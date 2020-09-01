@@ -1,7 +1,13 @@
 package com.qa.testcases;
 
+import org.testng.annotations.Test;
+import org.testng.annotations.Test;
+import org.testng.annotations.Test;
+import static org.testng.Assert.assertTrue;
+
 import java.io.IOException;
 
+import org.testng.Assert;
 import org.testng.SkipException;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
@@ -39,12 +45,12 @@ public class LoginTestcase extends TestBase {
 		} 
 	 }
 	 
- @Test
+ @Test(retryAnalyzer=com.qa.Listeners.RetryAnalyzer.class)
 	public void loginpagetest() throws Exception
 	{
 	
   home=obj.loginpagemethod(Constants.Emailid, Constants.password);	
-		
+		Assert.assertTrue(false);
 	}
 	
 	
